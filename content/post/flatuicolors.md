@@ -2,12 +2,12 @@
 title = "FlatUIColors"
 date = "2021-03-02"
 tags = [
-    "art",
     "color",
+    "art",
 	"ui",
 ]
 description = "Useful Palettes for UI"
 link = "https://flatuicolors.com/"
-image = "images/flatuicolors.jpeg"
+image = "https://usepanda.com/img/logos/flatui.png"
 +++
 Useful Palettes for UI

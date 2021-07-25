@@ -1,5 +1,25 @@
 {{ define "body-class" }}template-tagslist{{ end }}
 {{ define "main" }}
-    {{ partialCached "widget/tag-cloud" . }}
+
+    <div class="subsection-list">
+        {{ partialCached "widget/tag-cloud" . }}
+    </div>
+
+    <!-- {{ $pages := where .Site.RegularPages "Type" "in" .Site.Params.mainSections }}
+    {{ $notHidden := where .Site.RegularPages "Params.hidden" "!=" true }}
+    {{ $filtered := ($pages | intersect $notHidden) }}
+
+    {{ range $filtered.GroupByDate "2006" }}
+    {{ $id := lower (replace .Key " " "-") }}
+    <div class="archives-group" id="{{ $id }}">
+        <h2 class="archives-date section-title"><a href="{{ $.RelPermalink }}#{{ $id }}">{{ .Key }}</a></h2>
+        <div class="article-list--compact">
+            {{ range .Pages }}
+                {{ partial "article-list/compact" . }}
+            {{ end }}
+        </div>
+    </div>
+    {{ end }} -->
+
     {{ partialCached "footer/footer" . }}
 {{ end }}

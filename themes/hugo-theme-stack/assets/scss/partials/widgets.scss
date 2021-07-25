@@ -1,10 +1,11 @@
 .widget {
     .widget-icon {
         svg {
-            width: 32px;
-            height: 32px;
+            width: 30px;
+            height: 30px;
             stroke-width: 1.6;
             color: var(--body-text-color);
+            padding-right: 10px;
         }
     }
 }

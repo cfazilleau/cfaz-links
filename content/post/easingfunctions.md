@@ -2,8 +2,8 @@
 title = "Easing Functions Cheat Sheet"
 date = "2021-03-02"
 tags = [
-    "maths",
     "programming",
+    "maths",
 ]
 description = "Useful easing functions cheat sheet"
 link = "https://easings.net/"

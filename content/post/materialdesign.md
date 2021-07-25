@@ -2,8 +2,8 @@
 title = "Material Design Icons"
 date = "2021-03-02"
 tags = [
-    "ui",
     "icons",
+    "ui",
 ]
 description = "Five sets of stylized system icons, available in a range of formats and sizes."
 link = "https://material.io/resources/icons"
