@@ -1,5 +1,5 @@
 baseurl: https://links.cfaz.dev
-languageCode: en-us
+languageCode: en
 theme: hugo-theme-stack
 paginate: 50
 title: CFaz Bookmarks
