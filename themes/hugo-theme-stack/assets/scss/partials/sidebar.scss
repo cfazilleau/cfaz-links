@@ -98,10 +98,10 @@
     .site-name {
         color: var(--accent-color);
         margin: 0;
-        font-size: 1.8rem;
+        font-size: 2rem;
 
         @include respond(2xl) {
-            font-size: 2rem;
+            font-size: 2.8rem;
         }
     }
 

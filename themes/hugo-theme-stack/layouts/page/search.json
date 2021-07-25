@@ -5,7 +5,9 @@
 {{- $result := slice -}}
 
 {{- range $filtered -}}
-    {{- $data := dict "title" .Title "date" .Date "permalink" .Permalink "content" (.Plain) -}}
+    {{ $url := urls.Parse .Params.link }}
+    {{ $url := printf "(%s)" $url.Host }}
+    {{- $data := dict "title" .Title "date" .Date "permalink" .Permalink "link" .Params.link "externalURL" $url "content" (.Plain) -}}
 
     {{- $image := partialCached "helper/image" (dict "Context" . "Type" "articleList") .RelPermalink "articleList" -}}
     {{- if $image.exists -}}
@@ -16,7 +18,7 @@
         {{- else -}}
             {{- $imagePermalink = $image.permalink -}}
         {{- end -}}
-        
+
         {{- $data = merge $data (dict "image" (absURL $imagePermalink)) -}}
     {{- end -}}
 

@@ -1,6 +1,6 @@
 <div class="article-details">
-    {{ if .Params.categories }}
-    <header class="article-category">
+    {{ if .Params.tags }}
+    <header class="article-tags">
         {{ range (.GetTerms "tags") }}
             <a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }}; color: {{ .color }};"{{ end }}>
                 {{ .LinkTitle }}

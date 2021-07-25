@@ -2,6 +2,8 @@ interface pageData {
     title: string,
     date: string,
     permalink: string,
+    link: string,
+    externalURL?: string,
     content: string,
     image?: string,
     preview: string,
@@ -222,7 +224,66 @@ class Search {
 
     public static render(item: pageData) {
         return <article>
-            <a href={item.permalink}>
+            <div>
+                <a href={item.link || item.permalink} target="_blank" rel="noopener noreferrer">
+                    <div class="article-details">
+                        <div class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}>
+                            {item.externalURL != "()" && <l class="article-link" dangerouslySetInnerHTML={{ __html: item.externalURL }}></l>}
+                        </div>
+                        <secion class="article-preview" dangerouslySetInnerHTML={{ __html: item.preview }}></secion>
+                    </div>
+                    {item.image &&
+                        <div class="article-image">
+                            <img src={item.image} loading="lazy" />
+                        </div>
+                    }
+                </a>
+            </div>
+        </article>;
+/*                <div class="article-details">
+                    <div class="article-title">{{- .Title -}}
+                        {{ $url := urls.Parse .Params.link }}
+                        <l class="article-link">({{ $url.Host }})</l>
+                    </div>
+                    <h class="article-description">
+                        {{- .Description -}}
+                    </h>
+                    <footer class="article-time">
+                        <time datetime='{{ .Date.Format "2006-01-02T15:04:05Z07:00" }}'>
+                            {{- .Date.Format (or .Site.Params.dateFormat.published "Jan 02, 2006") -}}
+                        </time>
+                    </footer>
+                </div>
+
+                {{- $image := partialCached "helper/image" (dict "Context" . "Type" "articleList") .RelPermalink "articleList" -}}
+                {{ if $image.exists }}
+                    <div class="article-image">
+                        {{ if $image.resource }}
+                            {{- $Permalink := $image.resource.RelPermalink -}}
+                            {{- $Width := $image.resource.Width -}}
+                            {{- $Height := $image.resource.Height -}}
+
+                            {{- if (default true .Page.Site.Params.imageProcessing.cover.enabled) -}}
+                                {{- $thumbnail := $image.resource.Fill "120x120" -}}
+                                {{- $Permalink = $thumbnail.RelPermalink -}}
+                                {{- $Width = $thumbnail.Width -}}
+                                {{- $Height = $thumbnail.Height -}}
+                            {{- end -}}
+
+                            <img src="{{ $Permalink }}"
+                                width="{{ $Width }}"
+                                height="{{ $Height }}"
+                                loading="lazy">
+                        {{ else }}
+                            <img src="{{ $image.permalink }}" loading="lazy" alt="Featured image of post {{ .Title }}" />
+                        {{ end }}
+                    </div>
+                {{ end }}
+            </a>
+        </article>
+
+        <article>
+            <a href={item.link}>
                 <div class="article-details">
                     <h2 class="article-title" dangerouslySetInnerHTML={{ __html: item.title }}></h2>
                     <secion class="article-preview" dangerouslySetInnerHTML={{ __html: item.preview }}></secion>
@@ -234,6 +295,7 @@ class Search {
                 }
             </a>
         </article>;
+        */
     }
 }
 

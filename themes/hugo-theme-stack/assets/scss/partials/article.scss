@@ -39,7 +39,7 @@
 
         @for $i from 1 through length($defaultTagBackgrounds) {
             &:nth-child(#{length($defaultTagBackgrounds)}n + #{$i}) {
-                .article-category a {
+                .article-tags a {
                     background: nth($defaultTagBackgrounds, $i);
                     color: nth($defaultTagColors, $i);
                 }
@@ -135,10 +135,10 @@
     border-radius: var(--card-border-radius);
     box-shadow: var(--shadow-l1);
     background-color: var(--card-background);
-    --image-size: 50px;
+    --image-size: 60px;
 
     @include respond(md) {
-        --image-size: 60px;
+        --image-size: 80px;
     }
 
     & + .pagination {
@@ -146,10 +146,14 @@
     }
 
     article {
-        & > a {
-            display: flex;
-            align-items: center;
+
+        & > div {
             padding: var(--small-card-padding);
+
+            & > a {
+                display: flex;
+                align-items: center;
+            }
         }
 
         &:not(:last-of-type) {
@@ -166,22 +170,30 @@
         .article-title {
             margin: 0;
             font-size: 1.6rem;
+            margin-bottom: 5px;
 
             @include respond(md) {
                 font-size: 1.8rem;
             }
         }
 
+        .article-link {
+            margin-left: 5px;
+            color: var(--card-text-color-tertiary);
+        }
+
         .article-image {
             img {
                 width: var(--image-size);
                 height: var(--image-size);
+                border-radius: 10%;
                 object-fit: cover;
             }
         }
 
         .article-time {
             font-size: 1.4rem;
+            margin-top: 5px;
         }
 
         .article-preview {
@@ -189,6 +201,15 @@
             color: var(--card-text-color-tertiary);
             margin-top: 10px;
             line-height: 1.5;
+        }
+
+        @for $i from 1 through length($defaultTagBackgrounds) {
+            &:nth-child(#{length($defaultTagBackgrounds)}n + #{$i}) {
+                .article-tags a {
+                    background: nth($defaultTagBackgrounds, $i);
+                    color: nth($defaultTagColors, $i);
+                }
+            }
         }
     }
 }

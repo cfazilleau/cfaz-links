@@ -1,0 +1,5 @@
+{{ define "body-class" }}template-tagslist{{ end }}
+{{ define "main" }}
+    {{ partialCached "widget/tag-cloud" . }}
+    {{ partialCached "footer/footer" . }}
+{{ end }}
