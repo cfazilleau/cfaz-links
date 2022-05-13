@@ -7,6 +7,6 @@ tags = [
 ]
 description = "A cloud-based document editor that blends spreadsheets, presentations and documents"
 link = "https://coda.io/"
-image = "https://upload.wikimedia.org/wikipedia/commons/9/98/Coda-io-logo.png"
+image = "https://dev-to-uploads.s3.amazonaws.com/uploads/organization/profile_image/396/3b0f0f01-b434-43de-aec4-e1d711a01d54.png"
 +++
 A cloud-based document editor that blends spreadsheets, presentations and documents
