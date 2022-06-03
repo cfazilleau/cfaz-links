@@ -1,4 +1,4 @@
-# CFaz links
+# CFaz bookmarks
 A static website referencing various resources for game developers and tech enthusiasts.
 Visit it at [links.cfaz.dev](https://links.cfaz.dev)
 
