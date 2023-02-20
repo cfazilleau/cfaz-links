@@ -8,6 +8,6 @@ tags = [
 ]
 description = "Unofficial Unreal Engine documentation on specifiers and others."
 link = "https://benui.ca/unreal/docs/"
-image = "https://benui.ca/assets/benui_logotype-white.svg"
+image = "https://pbs.twimg.com/profile_images/1493024082308206593/Kwcv7hvV_400x400.jpg"
 +++
 Unofficial Unreal Engine documentation on specifiers and others.
