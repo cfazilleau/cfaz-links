@@ -6,8 +6,8 @@ tags = [
     "gamedev",
     "unreal",
 ]
-description = "A compilation of the concepts you will face when working in C++ and Unreal Engine."
-link = "https://www.tomlooman.com/unreal-engine-cpp-guide/"
-image = "https://i0.wp.com/www.tomlooman.com/wp-content/uploads/2023/02/cropped-TL_Logo_2022-copy.png"
+description = "Unofficial Unreal Engine documentation on specifiers and others."
+link = "https://benui.ca/unreal/docs/"
+image = "https://benui.ca/assets/benui_logotype-white.svg"
 +++
-A compilation of the concepts you will face when working in C++ and Unreal Engine.
+Unofficial Unreal Engine documentation on specifiers and others.
