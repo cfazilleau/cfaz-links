@@ -7,7 +7,7 @@ tags = [
     "unreal",
 ]
 description = "A compilation of the concepts you will face when working in C++ and Unreal Engine."
-link = "https://www.tomlooman.com/unreal-engine-cpp-guide/"
+link = "https://tomlooman.com/unreal-engine-cpp-guide/"
 image = "https://i0.wp.com/www.tomlooman.com/wp-content/uploads/2023/02/cropped-TL_Logo_2022-copy.png"
 +++
 A compilation of the concepts you will face when working in C++ and Unreal Engine.
