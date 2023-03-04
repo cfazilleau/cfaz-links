@@ -8,5 +8,5 @@ tags = [
 ]
 description = "an extension for the Unity Inspector with plenty of new drawers and attributes"
 link = "https://github.com/dbrizov/NaughtyAttributes"
-image = "https://unitylist.com/build/thumbs/dbrizov_naughtyattributes.jpg"
+image = "https://github.githubassets.com/images/modules/logos_page/GitHub-Mark.png"
 +++
