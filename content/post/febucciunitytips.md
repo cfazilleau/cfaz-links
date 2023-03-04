@@ -10,4 +10,3 @@ description = "Useful unity tips about Programming, the Unity Editor, Optimizati
 link = "https://febucci.com/unity-tips/"
 image = "https://febucci.com/assets/images/febucci-logo.png"
 +++
-Useful unity tips about Programming, the Unity Editor, Optimization, Games and way more!

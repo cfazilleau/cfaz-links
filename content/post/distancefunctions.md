@@ -9,4 +9,3 @@ description = "Distance functions for basic primitives and formulas for combinin
 link = "https://iquilezles.org/www/articles/distfunctions/distfunctions.htm"
 image = "https://iquilezles.org/www/articles/distfunctions/gfx40.png"
 +++
-Distance functions for basic primitives and formulas for combining them together

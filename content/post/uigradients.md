@@ -11,4 +11,3 @@ description = "Beautiful colored gradients library"
 link = "https://uigradients.com/"
 image = "http://uigradients.com/static/images/uigradients.jpg"
 +++
-Beautiful colored gradients library

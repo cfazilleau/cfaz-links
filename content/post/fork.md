@@ -11,4 +11,3 @@ description = "A fast and friendly git client for mac and windows"
 link = "https://fork.dev/"
 image = "https://fork.dev/images/logo.png"
 +++
-A fast and friendly git client for mac and windows

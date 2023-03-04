@@ -10,4 +10,3 @@ description = "an extension for the Unity Inspector with plenty of new drawers a
 link = "https://github.com/dbrizov/NaughtyAttributes"
 image = "https://unitylist.com/build/thumbs/dbrizov_naughtyattributes.jpg"
 +++
-an extension for the Unity Inspector with plenty of new drawers and attributes

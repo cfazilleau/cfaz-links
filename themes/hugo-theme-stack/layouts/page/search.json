@@ -7,7 +7,11 @@
 {{- range $filtered -}}
     {{ $url := urls.Parse .Params.link }}
     {{ $url := printf "(%s)" $url.Host }}
-    {{- $data := dict "title" .Title "date" .Date "permalink" .Permalink "link" .Params.link "externalURL" $url "content" (.Plain) -}}
+    {{ $content := (.Plain) }}
+    {{- if .Description -}}
+        {{ $content = (printf "%s\n%s" .Description $content) }}
+    {{- end -}}
+    {{- $data := dict "title" .Title "date" .Date "permalink" .Permalink "link" .Params.link "externalURL" $url "content" $content -}}
 
     {{- $image := partialCached "helper/image" (dict "Context" . "Type" "articleList") .RelPermalink "articleList" -}}
     {{- if $image.exists -}}

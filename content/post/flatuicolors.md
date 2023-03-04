@@ -10,4 +10,3 @@ description = "Useful Palettes for UI"
 link = "https://flatuicolors.com/"
 image = "https://usepanda.com/img/logos/flatui.png"
 +++
-Useful Palettes for UI
