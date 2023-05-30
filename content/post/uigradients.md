@@ -9,5 +9,5 @@ tags = [
 ]
 description = "Beautiful colored gradients library"
 link = "https://uigradients.com/"
-image = "http://uigradients.com/static/images/uigradients.jpg"
+image = "https://uigradients.com/static/images/uigradients.jpg"
 +++
