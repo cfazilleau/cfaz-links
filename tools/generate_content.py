@@ -5,6 +5,7 @@ import shutil
 
 # output dir
 output_dir = "content/post/"
+css_path = "static/tags.css"
 
 # Coda.io API Details
 coda_api_key = os.environ['CODA_API_KEY']
@@ -19,6 +20,7 @@ column_ids = {
     'link'        : 'c-LQRg1noK1k',
     'image'       : 'c-_zpRcDFVkH',
 }
+css_backgrounds = [ '#8ea885', '#df7988', '#0177b8', '#cc9f28', '#6b69d6', '#a863c1', '#d5752f', '#62bdbd', '#ac3d3d' ]
 
 # Define the URL for the Coda.io API
 coda_api_url = f'https://coda.io/apis/v1/docs/{doc_id}/tables/{table_id}/rows'
@@ -34,6 +36,24 @@ def fetch_data_from_coda():
     else:
         print(f"Failed to fetch data from Coda.io. Status code: {response.status_code}")
         return None
+
+def extract_tags(data):
+    tags = []
+    for row in data['items']:
+        for tag in row['values'][column_ids['tags']].split(','):
+            tags.append(tag.replace(' ', '-'))
+    tags = list(set(tags))
+    print(f"Tags found ({len(tags)}): {tags}")
+
+    print(f"Writing tag styles in {css_path}")
+    with open(css_path, 'w') as file:
+        file.write("html{")
+        for index in range(len(css_backgrounds)):
+            file.write(f"--tag-background-{index}:{css_backgrounds[index]};")
+        file.write("}")
+        for index in range(len(tags)):
+            file.write(f".tag-{tags[index]}"+"{border-left: 10px solid var(--tag-background-" + str(index % len(css_backgrounds)) + ")!important;}")
+
 
 # Function to create files for each row
 def create_data_files(data):
@@ -82,4 +102,5 @@ def create_data_files(data):
 if __name__ == "__main__":
     coda_data = fetch_data_from_coda()
     if coda_data:
+        extract_tags(coda_data)
         create_data_files(coda_data)

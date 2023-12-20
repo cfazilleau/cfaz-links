@@ -3,7 +3,7 @@
         {{ if .Params.tags }}
         <header class="article-tags">
             {{ range (.GetTerms "tags") }}
-            <a href="{{ .RelPermalink }}" {{ with .Params.style }}style="background-color: {{ .background }} !important; color: {{ .color }} !important;"{{ end }}>
+            <a href="{{ .RelPermalink }}" class=tag-{{ replace .LinkTitle " " "-" }}>
                 {{ .LinkTitle }}
             </a>
             {{ end }}
